@@ -7,11 +7,18 @@ terraform {
   }
 
   required_version = ">= 1.2.0"
+
+  cloud {
+    organization = "jktam"
+
+    workspaces {
+      name = "example-workspace"
+    }
+  }
 }
 
 provider "aws" {
   region = "us-west-2"
-  shared_credentials_files = ["~/.aws/credentials"]
 }
 
 resource "aws_instance" "app_server" {
@@ -22,4 +29,3 @@ resource "aws_instance" "app_server" {
     Name = var.instance_name
   }
 }
-
