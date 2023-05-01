@@ -1,0 +1,24 @@
+[profile dev]
+sso_session = my-sso
+sso_account_id = 757849047634
+sso_role_name = AdministratorAccess
+region = us-west-2
+output = json
+external_id = thejamesrollextid
+[sso-session my-sso]
+sso_start_url = https://d-9267570055.awsapps.com/start
+sso_region = us-west-2
+sso_registration_scopes = sso:account:access
+[default]
+sso_session = my-sso
+sso_account_id = 757849047634
+sso_role_name = AdministratorAccess
+region = us-west-2
+output = json
+[profile default]
+sso_session = my-sso
+sso_account_id = 757849047634
+sso_role_name = AdministratorAccess
+region = us-west-2
+output = json
+
